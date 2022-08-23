@@ -12,7 +12,9 @@ export default function Card(props) {
       <div className='type'>{props.type}</div>
       <div className='price'>{props.price}</div>
       <div className='features'>{props.features}</div>
-      <div className='btn'>Pick Plan</div>
+      <button className='btn' onClick={props.handleClick}>
+        Pick Plan
+      </button>
       {recommended}
     </div>
   );

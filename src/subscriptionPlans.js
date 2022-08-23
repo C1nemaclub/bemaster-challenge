@@ -5,6 +5,9 @@ export default [
     features: ['Feature 1', 'Feature 2', 'Feature 3'],
     recommended: false,
     id: 1,
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sint.',
+    content: ['Movies(Limited)'],
   },
   {
     type: 'Standard',
@@ -12,6 +15,9 @@ export default [
     features: ['Feature 1', 'Feature 2', 'Feature 3'],
     recommended: false,
     id: 2,
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sint.',
+    content: ['Movies', 'Live TV'],
   },
   {
     type: 'Pro',
@@ -19,6 +25,9 @@ export default [
     features: ['Feature 1', 'Feature 2', 'Feature 3'],
     recommended: true,
     id: 3,
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sint.',
+    content: ['Movies', 'Live TV', 'Live Sports', 'Series', 'Premieres'],
   },
   {
     type: 'Premium',
@@ -26,6 +35,16 @@ export default [
     features: ['Feature 1', 'Feature 2', 'Feature 3'],
     recommended: false,
     id: 4,
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sint.',
+    content: [
+      'Movies',
+      'Live TV',
+      'Live Sports',
+      'Series',
+      'Premieres',
+      'Exclusive Premieres',
+    ],
   },
   {
     type: 'Deluxe',
@@ -33,5 +52,16 @@ export default [
     features: ['Feature 1', 'Feature 2', 'Feature 3'],
     recommended: false,
     id: 5,
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sint.',
+    content: [
+      'Movies',
+      'Live TV',
+      'Live Sports',
+      'Series',
+      'Premieres',
+      'Exclusive Premieres',
+      'Behind the Scenes Content',
+    ],
   },
 ];

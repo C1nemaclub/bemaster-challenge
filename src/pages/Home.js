@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from '../components/Card';
 import subscriptionPlans from '../subscriptionPlans';
 
 export default function Home() {
+  const navigate = useNavigate();
   const [plans, setPlans] = useState(subscriptionPlans);
+
+  function chosePlan(plan) {
+    navigate(`/plan/${plan.type}`, { state: plan });
+  }
 
   const cardElements = plans.map((plan) => {
     return (
@@ -13,6 +19,7 @@ export default function Home() {
         price={plan.price}
         features={plan.features}
         recommended={plan.recommended}
+        handleClick={() => chosePlan(plan)}
       />
     );
   });

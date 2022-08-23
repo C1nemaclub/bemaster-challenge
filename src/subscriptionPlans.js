@@ -7,7 +7,7 @@ export default [
     id: 1,
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sint.',
-    content: ['Movies(Limited)'],
+    content: [{ name: 'Movies', sinopsis: 'Yes Movies' }],
   },
   {
     type: 'Standard',
@@ -17,7 +17,7 @@ export default [
     id: 2,
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sint.',
-    content: ['Movies', 'Live TV'],
+    content: [{ name: 'Movies', sinopsis: 'Yes Movies' }],
   },
   {
     type: 'Pro',
@@ -27,7 +27,7 @@ export default [
     id: 3,
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sint.',
-    content: ['Movies', 'Live TV', 'Live Sports', 'Series', 'Premieres'],
+    content: [{ name: 'Movies', sinopsis: 'Yes Movies' }],
   },
   {
     type: 'Premium',
@@ -37,14 +37,7 @@ export default [
     id: 4,
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sint.',
-    content: [
-      'Movies',
-      'Live TV',
-      'Live Sports',
-      'Series',
-      'Premieres',
-      'Exclusive Premieres',
-    ],
+    content: [{ name: 'Movies', sinopsis: 'Yes Movies' }],
   },
   {
     type: 'Deluxe',
@@ -55,13 +48,8 @@ export default [
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, sint.',
     content: [
-      'Movies',
-      'Live TV',
-      'Live Sports',
-      'Series',
-      'Premieres',
-      'Exclusive Premieres',
-      'Behind the Scenes Content',
+      { name: 'Movies', sinopsis: 'Yes Movies' },
+      { name: 'Premieres', sinopsis: 'Yes Movigdfgadfdfes' },
     ],
   },
 ];

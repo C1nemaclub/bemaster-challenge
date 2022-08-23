@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { loginUser } from '../features/login/loginSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: '', password: '' });
+
+  const { user, isLoading, isSuccess, isError, msg } = useSelector(
+    (state) => state.login
+  );
 
   function updateForm(e) {
     e.preventDefault();
@@ -15,6 +24,15 @@ export default function Login() {
     });
   }
 
+  function onSubmit(e) {
+    e.preventDefault();
+    dispatch(loginUser(formData));
+    navigate('/');
+  }
+
+  if (isLoading) {
+    return <h1 style={{ color: 'red' }}>Loading...</h1>;
+  }
   return (
     <>
       <div className='page login-page'>
@@ -40,6 +58,9 @@ export default function Login() {
               name='password'
               value={formData.password}
             />
+            <div className='input-group'>
+              <button onClick={onSubmit}>Login</button>
+            </div>
           </form>
         </div>
       </div>

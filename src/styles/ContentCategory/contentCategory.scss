@@ -1,0 +1,67 @@
+.content-page {
+  .content {
+    margin-top: 2rem;
+    .content-title {
+      color: #fff;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      animation: fadeIn 0.5s 0.24s backwards;
+      font-weight: 900;
+    }
+    .content-list {
+      list-style-type: none;
+      animation: fadeIn 0.5s 0.5s backwards;
+      li {
+        color: #fff;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #ed1d24;
+        cursor: pointer;
+        padding-bottom: 0.4rem;
+        position: relative;
+        overflow: hidden;
+        letter-spacing: 1.5px;
+        font-weight: 200;
+        padding: 0.4rem 1rem;
+        &::after {
+          content: ' ';
+          position: absolute;
+          top: 50%;
+          left: -55%;
+          transform: translate(-50%, -50%);
+          background: red;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          transition: 0.2s ease-in-out;
+        }
+        &:hover::after {
+          left: 50%;
+        }
+      }
+    }
+
+    .btn-sub {
+      color: #ed1d24;
+      background-color: #fff;
+      transition: 0.24s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .btns {
+      animation: fadeIn 0.5s 0.75s backwards;
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    button {
+      color: white;
+      background: #ed1d24;
+      transition: 0.24s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

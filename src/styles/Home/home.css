@@ -1,0 +1,40 @@
+.home-page .content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.home-page .hero-text {
+  color: #fff;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 900;
+  max-width: 600px;
+  -webkit-animation: fadeIn 0.5s 0.3s backwards;
+          animation: fadeIn 0.5s 0.3s backwards;
+}
+
+.card-container {
+  width: 85%;
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  place-items: center;
+  margin-top: 5rem;
+}
+
+.card {
+  grid-column: span 1;
+}
+/*# sourceMappingURL=home.css.map */

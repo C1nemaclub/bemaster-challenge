@@ -1,0 +1,38 @@
+nav {
+  width: 100%;
+  background: #ed1d24;
+  height: 4.5rem;
+}
+
+nav ul {
+  padding: 1rem 2rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.active {
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  background: white;
+  color: #ed1d24;
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=header.css.map */

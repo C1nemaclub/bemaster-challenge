@@ -1,0 +1,43 @@
+.login-page {
+  .form-container {
+    transition: 0.3s ease-in-out;
+
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .form-title {
+      color: #fff;
+      margin-bottom: 3rem;
+      font-size: 3rem;
+      animation: fadeIn 0.5s 0.25s backwards;
+    }
+    .input-group {
+      margin-bottom: 0.3rem;
+      input {
+        padding: 0.5rem 1rem;
+        font-size: 1.3rem;
+      }
+    }
+    .input-group:nth-child(1) {
+      animation: fadeIn 0.5s 0.5s backwards;
+    }
+    .input-group:nth-child(2) {
+      animation: fadeIn 0.5s 0.75s backwards;
+    }
+    button {
+      margin-top: 2rem;
+      color: #fff;
+      background: #ed1d24;
+      width: 120px;
+      transition: 0.24s ease-in-out;
+      animation: fadeIn 0.5s 1s backwards;
+      &:hover {
+        background: white;
+        color: #ed1d24;
+      }
+    }
+  }
+}

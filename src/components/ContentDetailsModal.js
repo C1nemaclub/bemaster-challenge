@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import '../styles/ContentDetailsModal/contentDetailsModal.scss';
+import { FiX } from 'react-icons/fi';
 
 export default function ContentDetailsModal(props) {
+  console.log(props);
+
   const overlay_style = {
     position: 'fixed',
     top: 0,
     left: 0,
     bottom: 0,
     right: 0,
-    backgroundColor: 'rgba(0,0,0,.7)',
+    backgroundColor: 'rgba(0,0,0,.8)',
     zIndex: 1000,
   };
 
@@ -18,10 +22,11 @@ export default function ContentDetailsModal(props) {
   return ReactDom.createPortal(
     <>
       <div style={overlay_style}>
-        <div className='modal'>{props.contentDetail}</div>
-        <button className='btn danger' onClick={props.handleClick}>
-          Cancel
-        </button>
+        <div className='modal'>
+          <div className='modal-title'>{props.contentDetail.name}</div>
+          <p className='modal-text'>{props.contentDetail.sinopsis}</p>
+          <FiX className='x-icon icon' onClick={props.handleClick} />
+        </div>
       </div>
     </>,
     document.getElementById('portal')

@@ -8,8 +8,12 @@ export default function Card(props) {
     ''
   );
 
-  const featureElements = props.features.map((item) => {
-    return <div className='feature'>{item}</div>;
+  const featureElements = props.features.map((item, index) => {
+    return (
+      <div className='feature' key={index}>
+        {item}
+      </div>
+    );
   });
 
   const style = {

@@ -28,7 +28,10 @@ export default function Home() {
   return (
     <>
       <div className='page home-page'>
-        <div className='card-container'>{cardElements}</div>
+        <div className='content'>
+          <h1 className='hero-text'>Start Watching The Best Content Now!</h1>
+          <div className='card-container'>{cardElements}</div>
+        </div>
       </div>
     </>
   );

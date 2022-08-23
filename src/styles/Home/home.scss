@@ -1,0 +1,12 @@
+.card-container {
+  width: 85%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  place-items: center;
+  margin-top: 5rem;
+}
+
+.card {
+  grid-column: span 1;
+}

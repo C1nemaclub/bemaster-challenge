@@ -1,7 +1,7 @@
 export default [
   {
     type: 'Free',
-    price: '0 USD',
+    price: '0',
     features: ['Feature 1', 'Feature 2', 'Feature 3'],
     recommended: false,
     id: 1,
@@ -11,7 +11,7 @@ export default [
   },
   {
     type: 'Standard',
-    price: '29.99 USD',
+    price: '29.99',
     features: ['Feature 1', 'Feature 2', 'Feature 3'],
     recommended: false,
     id: 2,
@@ -21,7 +21,7 @@ export default [
   },
   {
     type: 'Pro',
-    price: '39.99 USD',
+    price: '39.99',
     features: ['Feature 1', 'Feature 2', 'Feature 3'],
     recommended: true,
     id: 3,
@@ -31,7 +31,7 @@ export default [
   },
   {
     type: 'Premium',
-    price: '59.99 USD',
+    price: '59.99',
     features: ['Feature 1', 'Feature 2', 'Feature 3'],
     recommended: false,
     id: 4,
@@ -41,7 +41,7 @@ export default [
   },
   {
     type: 'Deluxe',
-    price: '69.99 USD',
+    price: '69.99',
     features: ['Feature 1', 'Feature 2', 'Feature 3'],
     recommended: false,
     id: 5,

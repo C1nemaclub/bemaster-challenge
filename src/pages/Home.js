@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../components/Card';
 import subscriptionPlans from '../subscriptionPlans';
+import '../styles/Home/home.scss';
 
 export default function Home() {
   const navigate = useNavigate();

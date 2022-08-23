@@ -1,0 +1,76 @@
+.card {
+  background: #fff;
+  width: 250px;
+  height: 400px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.top {
+  padding: 10px;
+  height: 35%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.price .tag {
+  font-size: 3rem;
+}
+.price {
+  margin-left: 10px;
+}
+.month {
+  font-size: 0.6rem;
+}
+
+.price::after {
+  content: '$';
+  position: absolute;
+  left: 20%;
+}
+.type {
+  font-size: 1.2rem;
+}
+
+.bottom {
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+.reccomended {
+  position: absolute;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.features {
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: 0;
+  color: white;
+  font-size: 1.1rem;
+  height: 40px;
+  border-radius: 40px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}

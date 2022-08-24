@@ -3,8 +3,15 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import ContentCategory from './pages/ContentCategory';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    document.title = 'Videos App';
+  }, []);
+
   return (
     <div className='App'>
       <Router>
@@ -15,6 +22,17 @@ function App() {
           <Route path='/plan/:id' element={<ContentCategory />} />
         </Routes>
       </Router>
+      <ToastContainer
+        position='top-right'
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

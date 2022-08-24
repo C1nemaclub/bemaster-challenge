@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Card from '../components/Card';
 import subscriptionPlans from '../subscriptionPlans';
 import '../styles/Home/home.scss';
+import { FaAngleRight } from 'react-icons/fa';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -25,12 +26,26 @@ export default function Home() {
     );
   });
 
+  function scrollDown() {
+    let pageHeight = window.innerHeight;
+    window.scrollBy(0, pageHeight);
+  }
+
   return (
     <>
       <div className='page home-page'>
         <div className='content'>
-          <h1 className='hero-text'>Start Watching The Best Content Now!</h1>
-          <div className='card-container'>{cardElements}</div>
+          <div className='hero'>
+            <h3>¡Hello to you once again!</h3>
+            <h1 className='hero-text'>Start Watching The Best Content Now!</h1>
+            <button className='btn plans-btn' onClick={scrollDown}>
+              Subscriptions
+              <FaAngleRight />
+            </button>
+          </div>
+          <div className='plans'>
+            <div className='card-container'>{cardElements}</div>
+          </div>
         </div>
       </div>
     </>

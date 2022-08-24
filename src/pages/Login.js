@@ -37,34 +37,36 @@ export default function Login() {
   return (
     <>
       <div className='page login-page'>
-        <div className='form-container'>
-          <h3 className='form-title'>Login</h3>
-          <form className='form login-form' onSubmit={(e) => onSubmit(e)}>
-            <div className='input-group'>
-              <input
-                type='email'
-                required
-                placeholder='Email'
-                onChange={(e) => updateForm(e)}
-                name='email'
-                value={formData.email}
-              />
-            </div>
-            <div className='input-group'>
-              <input
-                type='password'
-                required
-                placeholder='Password'
-                onChange={(e) => updateForm(e)}
-                name='password'
-                value={formData.password}
-              />
-            </div>
-            <div className='input-group'>
-              {/* <button onClick={onSubmit}>Login</button> */}
-              <button>Login</button>
-            </div>
-          </form>
+        <div className='content'>
+          <div className='form-container'>
+            <h3 className='form-title'>Sign In</h3>
+            <form className='form login-form' onSubmit={(e) => onSubmit(e)}>
+              <div className='input-group'>
+                <input
+                  type='email'
+                  required
+                  placeholder='Email'
+                  onChange={(e) => updateForm(e)}
+                  name='email'
+                  value={formData.email}
+                />
+              </div>
+              <div className='input-group'>
+                <input
+                  type='password'
+                  required
+                  placeholder='Password'
+                  onChange={(e) => updateForm(e)}
+                  name='password'
+                  value={formData.password}
+                />
+              </div>
+              <div className='input-group'>
+                {/* <button onClick={onSubmit}>Login</button> */}
+                <button>Login</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </>

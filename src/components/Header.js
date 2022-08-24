@@ -14,6 +14,9 @@ export default function Header() {
   return (
     <nav>
       <ul>
+        <li className='user-login user'>
+          {user && <h3>Welcome Back {user.userData.email}</h3>}
+        </li>
         <li>
           <NavLink
             to='/'
@@ -36,7 +39,9 @@ export default function Header() {
               dispatch(reset());
             }}
           >
-            <a href='#'>Logout</a>
+            <a href='#' className='login'>
+              Logout
+            </a>
           </li>
         ) : (
           <li>
@@ -44,13 +49,12 @@ export default function Header() {
               to='/login'
               exact='true'
               activeclassname='active'
-              className='projects-link'
+              className='projects-link login'
             >
               Login
             </NavLink>
           </li>
         )}
-        {user && <li>{user.userData.email}</li>}
       </ul>
     </nav>
   );

@@ -1,3 +1,9 @@
+import oldMovie from './assets/images/oldmovie.gif';
+import modernMovies from './assets/images/modernmovies.gif';
+import liveTv from './assets/images/livetv.gif';
+import liveSports from './assets/images/livesports.gif';
+import premiere from './assets/images/premiere.gif';
+import bts from './assets/images/bts.gif';
 export default [
   {
     type: 'Free',
@@ -11,6 +17,7 @@ export default [
       {
         name: 'Old Movies',
         sinopsis: 'Go back to the good old times and watch old movies',
+        image: oldMovie,
       },
     ],
   },
@@ -26,11 +33,13 @@ export default [
       {
         name: 'Old Movies',
         sinopsis: 'Go back to the good old times and watch old movies',
+        image: oldMovie,
       },
       ,
       {
         name: 'Modern Movies',
         sinopsis: 'Watch the best movies on the current era',
+        image: modernMovies,
       },
     ],
   },
@@ -46,19 +55,23 @@ export default [
       {
         name: 'Old Movies',
         sinopsis: 'Go back to the good old times and watch old movies',
+        image: oldMovie,
       },
       ,
       {
         name: 'Modern Movies',
         sinopsis: 'Watch the best movies on the current era',
+        image: modernMovies,
       },
       {
         name: 'Live TV',
         sinopsis: 'You dont need a Tv Anymore',
+        image: liveTv,
       },
       {
         name: 'Live Sports',
         sinopsis: 'Watch your favorite team live and on the best quality!',
+        image: liveSports,
       },
     ],
   },
@@ -74,23 +87,28 @@ export default [
       {
         name: 'Old Movies',
         sinopsis: 'Go back to the good old times and watch old movies',
+        image: oldMovie,
       },
       ,
       {
         name: 'Modern Movies',
         sinopsis: 'Watch the best movies on the current era',
+        image: modernMovies,
       },
       {
         name: 'Live TV',
         sinopsis: 'You dont need a Tv Anymore',
+        image: liveTv,
       },
       {
         name: 'Live Sports',
         sinopsis: 'Watch your favorite team live and on the best quality!',
+        image: liveSports,
       },
       {
         name: 'Premiere',
         sinopsis: 'Enjoy the new releases for your favorite movies and series!',
+        image: premiere,
       },
     ],
   },
@@ -106,28 +124,34 @@ export default [
       {
         name: 'Old Movies',
         sinopsis: 'Go back to the good old times and watch old movies',
+        image: oldMovie,
       },
       ,
       {
         name: 'Modern Movies',
         sinopsis: 'Watch the best movies on the current era',
+        image: modernMovies,
       },
       {
         name: 'Live TV',
         sinopsis: 'You dont need a Tv Anymore',
+        image: liveTv,
       },
       {
         name: 'Live Sports',
         sinopsis: 'Watch your favorite team live and on the best quality!',
+        image: liveSports,
       },
       {
         name: 'Premiere',
         sinopsis: 'Enjoy the new releases for your favorite movies and series!',
+        image: premiere,
       },
       {
         name: 'Behind the Scenes Content',
         sinopsis:
           'Enjoy the best behind the scenes content from your favorite movies and series!',
+        image: bts,
       },
     ],
   },

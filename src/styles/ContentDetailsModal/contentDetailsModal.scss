@@ -3,9 +3,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
+  width: 80%;
   border: 2px solid red;
-  height: 40%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,17 @@
     letter-spacing: 2px;
     text-align: center;
   }
+  .img-container {
+    width: 800px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      object-fit: cover;
+    }
+  }
+  
   button {
     color: #fff;
     background: #ed1d24;

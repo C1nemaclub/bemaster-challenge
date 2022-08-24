@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ContentDetailsModal from '../components/ContentDetailsModal';
 import '../styles/ContentCategory/contentCategory.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 export default function ContentCategory() {
+  const { user, isLoading, isSuccess, isError, msg } = useSelector(
+    (state) => state.login
+  );
+
   const navigate = useNavigate();
   const { state } = useLocation();
   const plan = state;
@@ -24,8 +30,12 @@ export default function ContentCategory() {
   });
 
   function openModal(listiteminfo) {
-    console.log(listiteminfo);
-
+    if (!user) {
+      console.log('Not logged in!');
+      toast.error('You need to be logged in!');
+      //navigate('/');
+      return;
+    }
     setIsOpen(true);
     setContentDetail(listiteminfo);
   }

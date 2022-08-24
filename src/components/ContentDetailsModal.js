@@ -23,6 +23,9 @@ export default function ContentDetailsModal(props) {
     <>
       <div style={overlay_style}>
         <div className='modal'>
+          <div className='img-container'>
+            <img src={props.contentDetail.image} alt='' />
+          </div>
           <div className='modal-title'>{props.contentDetail.name}</div>
           <p className='modal-text'>{props.contentDetail.sinopsis}</p>
           <FiX className='x-icon icon' onClick={props.handleClick} />

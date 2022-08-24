@@ -1,7 +1,8 @@
 nav {
   width: 100%;
-  background: #ed1d24;
   height: 4.5rem;
+  position: absolute;
+  z-index: 10;
 }
 
 nav ul {
@@ -16,8 +17,18 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 30px;
   height: 100%;
+}
+
+nav ul li {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+nav ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 nav ul a {
@@ -26,13 +37,32 @@ nav ul a {
   font-size: 1.4rem;
 }
 
+.login {
+  background: #ed1d24;
+  padding: 0.3rem 1rem;
+  border-radius: 6px;
+}
+
+.user {
+  margin-right: auto;
+  color: #ccc;
+}
+
 .active {
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
-  background: white;
-  color: #ed1d24;
-  padding: 0.3rem 0.6rem;
-  text-align: center;
-  border-radius: 10px;
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #ed1d24;
+  height: 3px;
+  width: 100%;
 }
 /*# sourceMappingURL=header.css.map */

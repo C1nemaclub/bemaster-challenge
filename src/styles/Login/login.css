@@ -1,11 +1,36 @@
-.login-page .form-container {
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+.login-page {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 9, 30, 0.8)), to(rgba(4, 9, 30, 0.8))), url("../../assets/images/moviewall.jpg");
+  background: linear-gradient(rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.8)), url("../../assets/images/moviewall.jpg");
+  background-size: cover;
+  background-position: center center;
+  -webkit-animation: fadeIn 0.25s ease-in-out;
+          animation: fadeIn 0.25s ease-in-out;
+}
+
+.login-page .content {
   width: 50%;
-  height: 50%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.login-page .form-container {
+  padding: 2rem;
+  width: 50%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 6px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -16,6 +41,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .login-page .form-container .form-title {
@@ -32,7 +58,7 @@
 
 .login-page .form-container .input-group input {
   padding: 0.5rem 1rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .login-page .form-container .input-group:nth-child(1) {
@@ -49,7 +75,8 @@
   margin-top: 2rem;
   color: #fff;
   background: #ed1d24;
-  width: 120px;
+  width: 100%;
+  border-radius: 6px;
   -webkit-transition: 0.24s ease-in-out;
   transition: 0.24s ease-in-out;
   -webkit-animation: fadeIn 0.5s 1s backwards;

@@ -4,9 +4,9 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 40%;
+  width: 80%;
   border: 2px solid red;
-  height: 40%;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,6 +36,25 @@
   font-weight: 200;
   letter-spacing: 2px;
   text-align: center;
+}
+
+.modal .img-container {
+  width: 800px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .modal button {

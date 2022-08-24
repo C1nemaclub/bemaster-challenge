@@ -3,9 +3,10 @@
 Esta aplicacion permite visualizar "videos" una vez el usuario ha iniciado sesion.
 Se utilizaron Gifs como Mockup para los videos
 
-** Caracteristicas **
+**Caracteristicas**
 - /Home , pantalla principal donde puedes ver informacion de los paquetes disponiles.
-- /ContentDetails , aqui puedes ver el contenido detallado de cada paquete.
+- /ContentDetails , aqui puedes ver el contenido que ofrece de cada paquete.
+- /ContentCategory, aqui puedes visualizar el contenido especifico que hayas elejido del paquete.
 - /Login, Aqui inicias sesion para poder acceder al contenido disponible.
 - 
 **Informacion**

@@ -4,8 +4,6 @@ import '../styles/ContentDetailsModal/contentDetailsModal.scss';
 import { FiX } from 'react-icons/fi';
 
 export default function ContentDetailsModal(props) {
-  console.log(props);
-
   const overlay_style = {
     position: 'fixed',
     top: 0,

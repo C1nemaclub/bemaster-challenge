@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { loginUser } from '../features/login/loginSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Login/login.scss';
+import { toast } from 'react-toastify';
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -28,11 +29,12 @@ export default function Login() {
   function onSubmit(e) {
     e.preventDefault();
     dispatch(loginUser(formData));
+    toast.success('Successfully Logged in!');
     navigate('/');
   }
 
   if (isLoading) {
-    return <h1 style={{ color: 'red' }}>Loading...</h1>;
+    return <h1 style={{ color: '#fff' }}>Loading...</h1>;
   }
   return (
     <>

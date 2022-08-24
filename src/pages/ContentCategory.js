@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ContentDetailsModal from '../components/ContentDetailsModal';
 import '../styles/ContentCategory/contentCategory.scss';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 
 export default function ContentCategory() {
@@ -16,22 +16,20 @@ export default function ContentCategory() {
   const [content, setContent] = useState(plan.content);
   const [contentDetail, setContentDetail] = useState();
   const [isOpen, setIsOpen] = useState(false);
-
   const contentElements = content.map((item) => {
     return (
-      <>
-        <ul className='content-list'>
-          <li className='content-list-item' onClick={() => openModal(item)}>
-            {item.name}
-          </li>
-        </ul>
-      </>
+      <li
+        key={item.id}
+        className='content-list-item'
+        onClick={() => openModal(item)}
+      >
+        {item.name}
+      </li>
     );
   });
 
   function openModal(listiteminfo) {
     if (!user) {
-      console.log('Not logged in!');
       toast.error('You need to be logged in!');
       //navigate('/');
       return;
@@ -45,7 +43,7 @@ export default function ContentCategory() {
       <div className='page content-page'>
         <div className='content'>
           <h1 className='content-title'>{plan.type} Package</h1>
-          {contentElements}
+          <ul className='content-list'>{contentElements}</ul>
           <div className='btns'>
             <button className='btn btn-sub'>Subscribe</button>
             <button onClick={() => navigate(-1)}>Go Back</button>

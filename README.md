@@ -8,7 +8,8 @@ Se utilizaron Gifs como Mockup para los videos
 - /ContentDetails , aqui puedes ver el contenido que ofrece de cada paquete.
 - /ContentCategory, aqui puedes visualizar el contenido especifico que hayas elejido del paquete.
 - /Login, Aqui inicias sesion para poder acceder al contenido disponible.
-- 
+- /Header, Barra de navegacion para moverte a traves de la pagina web.
+
 **Informacion**
 - Esta aplicacion se realizo utilizando React, y otras librerias como Redux para el manejo de estados globales, redux se uso especificamente para las funciones de inicio de sesion, esto nos garantiza poder hacer uso de sus variables globamente en nuestra aplicacion.
 - Se debe haber iniciado sesion para poder acceder a el contenido disponible en cada Paquete.

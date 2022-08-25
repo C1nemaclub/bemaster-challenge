@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { reset } from '../features/login/loginSlice';
 import '../styles/Header/header.scss';
-import { FaHome, FaUser } from 'react-icons/fa';
+import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 export default function Header() {
-  const { user, isLoading, isSuccess, isError, msg } = useSelector(
-    (state) => state.login
-  );
+  const navigate = useNavigate();
+  const { user } = useSelector((state) => state.login);
   const dispatch = useDispatch();
 
   return (
@@ -37,9 +37,12 @@ export default function Header() {
           <li
             onClick={() => {
               dispatch(reset());
+              toast.success('Succesfully logged out');
+              navigate('/');
             }}
           >
             <a href='#' className='login'>
+              <FaSignOutAlt />
               Logout
             </a>
           </li>
@@ -51,6 +54,7 @@ export default function Header() {
               activeclassname='active'
               className='projects-link login'
             >
+              <FaSignInAlt />
               Login
             </NavLink>
           </li>

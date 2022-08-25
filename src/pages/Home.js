@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../components/Card';
 import subscriptionPlans from '../subscriptionPlans';
@@ -7,7 +7,7 @@ import { FaAngleRight } from 'react-icons/fa';
 
 export default function Home() {
   const navigate = useNavigate();
-  const [plans, setPlans] = useState(subscriptionPlans);
+  const [plans] = useState(subscriptionPlans);
 
   function chosePlan(plan) {
     navigate(`/plan/${plan.type}`, { state: plan });

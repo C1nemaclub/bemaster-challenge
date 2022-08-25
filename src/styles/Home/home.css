@@ -79,8 +79,8 @@
 }
 
 .home-page .hero .plans-btn:hover {
-  -webkit-animation: bounce 1.2s ease-in-out infinite;
-          animation: bounce 1.2s ease-in-out infinite;
+  -webkit-animation: pulse 0.7s infinite;
+          animation: pulse 0.7s infinite;
 }
 
 .home-page .hero-text {

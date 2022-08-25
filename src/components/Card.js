@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Card/card.scss';
+import { FaAngleRight } from 'react-icons/fa';
 
 export default function Card(props) {
   const recommended = props.recommended ? (
@@ -42,8 +43,12 @@ export default function Card(props) {
       </div>
       <div className='bottom'>
         <div className='features'>{featureElements}</div>
-        <button className='btn' onClick={props.handleClick} style={style}>
-          Pick Plan
+        <button
+          className='btn pick-btn'
+          onClick={props.handleClick}
+          style={style}
+        >
+          Pick Plan <FaAngleRight />
         </button>
       </div>
       {recommended}

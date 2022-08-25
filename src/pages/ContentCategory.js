@@ -6,14 +6,12 @@ import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 
 export default function ContentCategory() {
-  const { user, isLoading, isSuccess, isError, msg } = useSelector(
-    (state) => state.login
-  );
+  const { user } = useSelector((state) => state.login);
 
   const navigate = useNavigate();
   const { state } = useLocation();
   const plan = state;
-  const [content, setContent] = useState(plan.content);
+  const [content] = useState(plan.content);
   const [contentDetail, setContentDetail] = useState();
   const [isOpen, setIsOpen] = useState(false);
   const contentElements = content.map((item) => {
@@ -31,7 +29,7 @@ export default function ContentCategory() {
   function openModal(listiteminfo) {
     if (!user) {
       toast.error('You need to be logged in!');
-      //navigate('/');
+      navigate('/login');
       return;
     }
     setIsOpen(true);

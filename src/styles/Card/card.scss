@@ -70,6 +70,16 @@ button {
   border-radius: 40px;
   width: 150px;
   cursor: pointer;
+  &:hover {
+    animation: pulse 0.7s infinite;
+  }
+}
+
+.pick-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .card:hover {

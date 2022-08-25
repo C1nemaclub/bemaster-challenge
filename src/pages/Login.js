@@ -10,9 +10,21 @@ export default function Login() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: '', password: '' });
 
-  const { user, isLoading, isSuccess, isError, msg } = useSelector(
-    (state) => state.login
-  );
+  function onSubmit(e) {
+    e.preventDefault();
+    const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9·-]+\.[a-z]{2,8}(.[a-z{2.,8}])?/g;
+    if (regEx.test(formData.email)) {
+      dispatch(loginUser(formData));
+      toast.success('Successfully Logged in!');
+      navigate('/');
+    } else if (!regEx.test(formData.email) && formData.email !== '') {
+      toast.warning('Email Not Valid');
+    } else {
+      toast.error('There was an error entering your email');
+    }
+  }
+
+  const { isLoading } = useSelector((state) => state.login);
 
   function updateForm(e) {
     e.preventDefault();
@@ -24,13 +36,6 @@ export default function Login() {
         [name]: value,
       };
     });
-  }
-
-  function onSubmit(e) {
-    e.preventDefault();
-    dispatch(loginUser(formData));
-    toast.success('Successfully Logged in!');
-    navigate('/');
   }
 
   if (isLoading) {
